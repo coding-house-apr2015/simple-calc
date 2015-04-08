@@ -1,13 +1,39 @@
-doctype html
 html
   head
     meta(charset='utf-8')      
-    title SimpleCalc
+    title jQuery Demo
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
   body
-    h1 SimpleCalc
-
+    
+    #calculator
+      #total
+        a#numfield
+        
+      #numbers
+        a.num 7
+        a.num 8
+        a.num 9
+        a.operator +
+        a.num 4
+        a.num 5
+        a.num 6
+        a.operator -
+        a.num 1
+        a.num 2
+        a.num 3
+        a.operator *
+        a.num .
+        a.num 0
+        a#equal =
+        a.operator /
+                   
+      #operators
+        
+        
+        
+        
     script(src='/vendor/jquery/dist/jquery.min.js')
+    script(src='/vendor/lodash/lodash.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
