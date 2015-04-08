@@ -8,5 +8,10 @@ function init() {
 
 function numClicked() {
   var newNum = $(this).text();
-  $('#display').text(newNum);
+  var oldNum = $('#display').text();
+  if (oldNum==='0') {
+    $('#display').text(newNum);
+  } else {
+    $('#display').text(oldNum+newNum);
+  }
 }
