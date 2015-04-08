@@ -7,7 +7,30 @@ html
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
   body
-    h1 SimpleCalc
+    #calccontainer
+      #display
+        p 0
+      #buttoncontainer
+        .buttonrow
+          button.number 7
+          button.number 8
+          button.number 9
+          button.operator +
+        .buttonrow
+          button.number 4
+          button.number 5
+          button.number 6
+          button.operator -
+        .buttonrow
+          button.number 1
+          button.number 2
+          button.number 3
+          button.operator *
+        .buttontow
+          button.number 0
+          button.number#decimal .
+          button#equal =
+          button.operator /
 
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
