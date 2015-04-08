@@ -9,5 +9,49 @@ html
   body
     h1 SimpleCalc
 
+    #screen 0
+    ul
+      li.key
+        #clear C
+      li.key
+        #changeSign +/-
+      li.key
+        #modulus %
+      li.key
+        .operator /
+    ul
+      li.key
+        .number#7 7
+      li.key
+        .number#8 8
+      li.key
+        .number#9 9
+      li.key
+        .operator x
+    ul
+      li.key
+        .number#4 4
+      li.key
+        .number#5 5
+      li.key
+        .number#6 6
+      li.key
+        .operator -
+    ul
+      li.key
+        .number#1 1
+      li.key
+        .number#2 2
+      li.key
+        .number#3 3
+      li.key
+        .operator +
+    ul
+      li.zeroKey 0   
+      li.key
+        #decimal .
+      li.key
+        .operator =
+    
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
