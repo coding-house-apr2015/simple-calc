@@ -34,7 +34,6 @@ function clickOperator() {
   operatorStr = $(this).text();
   displayNum = $('#display').text();
   clickDisplay();
-  // debugger;
 }
 
 function clickEqual() {
@@ -44,6 +43,15 @@ function clickEqual() {
   switch (operatorStr) {
     case '+':
       answer = parseFloat(displayNum) + parseFloat(currentNum);
-      $('#display').text(answer);
+      break;
+    case '-':
+      answer = parseFloat(displayNum) - parseFloat(currentNum);
+      break;
+    case '×':
+      answer = parseFloat(displayNum) * parseFloat(currentNum);
+      break;
+    case '÷':
+      answer = parseFloat(displayNum) / parseFloat(currentNum);
   }
+  $('#display').text(answer);
 }
