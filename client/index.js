@@ -6,6 +6,8 @@ function init(){
   $('.number').click(clickNumber);
   $('#decimal').click(clickDecimal);
   $('#display').click(clear);
+  $('.operator').click(clickOperator);
+
 }
 
 function clickNumber(){
@@ -23,5 +25,13 @@ function clickDecimal(){
 }
 
 function clear(){
+  $('#display').text('0');
+}
+
+var number1;
+function clickOperator(){
+  var op = $(this).text();
+  number1 = $('#display').text() * 1;
+  // clickEqual();
   $('#display').text('0');
 }
