@@ -29,8 +29,9 @@ function clear(){
 }
 
 var number1;
+var op;
 function clickOperator(){
-  var op = $(this).text();
+  op = $(this).text();
   number1 = $('#display').text() * 1;
   // clickEqual();
   $('#display').text('0');
