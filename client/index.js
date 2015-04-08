@@ -5,6 +5,7 @@ $(document).ready(init);
 function init(){
   $('.number').click(clickNumber);
   $('#decimal').click(clickDecimal);
+  $('#display').click(clickClear);
 }
 
 function clickNumber(){
@@ -19,3 +20,7 @@ function clickDecimal(){
   var output = display.indexOf('.') !== -1 ? display : display += '.';
   $('#display').text(output);
 }
+
+function clickClear(){
+    $('#display').text('0');
+  }
