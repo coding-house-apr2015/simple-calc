@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    meta(charset='utf-8')      
+    meta(charset='utf-8')
     title SimpleCalc
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
@@ -11,3 +11,28 @@ html
 
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
+
+    #calcBody
+      #displayArea
+        h3 0
+      #buttonGrid
+        .buttonRow
+          button.number 7
+          button.number 8
+          button.number 9
+          button.operator +
+        .buttonRow
+          button.number 4
+          button.number 5
+          button.number 6
+          button.operator -
+        .buttonRow
+          button.number 1
+          button.number 2
+          button.number 3
+          button.operator *
+        .buttonRow
+          button.number 0
+          button#decimal .
+          button#equal =
+          button.operator /
