@@ -40,7 +40,6 @@ function clickOperator(){
 function performCalculation() {
   var newNumber = parseFloat($('#display').text());
   var result;
-  console.log(operator);
   switch (operator) {
     case '+':
       result = storedNumber + newNumber;
@@ -55,5 +54,4 @@ function performCalculation() {
       result = storedNumber / newNumber;
   }
   $('#display').text(result);
-  storedNumber = 0;
 }
