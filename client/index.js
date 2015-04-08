@@ -11,11 +11,15 @@ $('button').click(function() {
 });
 
 $('#decimal').click(function() {
-  console.log('decimal');
+  // decimal handling
 });
 
 $('#equal').click(function() {
-  console.log('equal');
+  // perform operation
+});
+
+$('#display').click(function() {
+  // clear display
 });
 
 function displayNumber(newNumber) {
@@ -26,5 +30,5 @@ function displayNumber(newNumber) {
 }
 
 function handleOperator(operator) {
-
+  // handle operator
 }
