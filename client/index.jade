@@ -8,6 +8,30 @@ html
     link(rel='shortcut icon', href='/favicon.ico')
   body
     h1 SimpleCalc
+    div#container
+      table#calc
+        tr
+          td#display(colspan="4")
+        tr
+          td: .number 7
+          td: .number 8
+          td: .number 9
+          td: .operator +
+        tr
+          td: .number 4
+          td: .number 5
+          td: .number 6
+          td: .operator -
+        tr
+          td: .number 1
+          td: .number 2
+          td: .number 3
+          td: .operator *
+        tr
+          td: .number 0
+          td: .decimal .
+          td: #equal =
+          td: .operator /
 
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
