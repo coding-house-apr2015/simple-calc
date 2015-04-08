@@ -2,10 +2,15 @@
 
 $(document).ready(init);
 
+var x;
+var operator;
+
 function init(){
   $('.number').click(clickNumber);
   $('#decimal').click(clickDecimal);
   $('#display').click(clear);
+  $('.operator').click(storeData);
+  $('#equal').click(crunchNumbers);
 }
 
 function clickNumber(){
@@ -24,4 +29,29 @@ function clickDecimal(){
 
 function clear(){
   $('#display').text('0');
+}
+
+function storeData(){
+  operator = $(this).text();
+  x = parseFloat($('#display').text());
+  clear();
+}
+
+function crunchNumbers(){
+  var y = parseFloat($('#display').text());
+  var result;
+  switch (operator){
+    case '+':
+      result = x + y;
+      break;
+    case '-':
+      result = x - y;
+      break;
+    case '×':
+      result = x * y;
+      break;
+    case '÷':
+      result = x / y;
+  }
+  $('#display').text(result);
 }
