@@ -16,6 +16,6 @@ function clickNumber(){
 
 function clickDecimal(){
   var display = $('#display').text();
-  var output = display.includes('.') ? display : display += '.';
+  var output = display.indexOf('.') !== -1 ? display : display += '.';
   $('#display').text(output);
 }
