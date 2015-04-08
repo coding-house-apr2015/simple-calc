@@ -2,10 +2,15 @@
 
 $(document).ready(init);
 
+var displayNum;
+var operatorStr;
+
 function init(){
   $('.number').click(clickNumber);
   $('#decimal').click(clickDecimal);
-  $('#display').click(clear);
+  $('#display').click(clickDisplay);
+  $('.operator').click(clickOperator);
+  $('#equal').click(clickEqual);
 }
 
 function clickNumber(){
@@ -15,13 +20,38 @@ function clickNumber(){
   $('#display').text(output);
 }
 
-
 function clickDecimal(){
   var display = $('#display').text();
   var output = display.indexOf('.') !== -1 ? display : display += '.';
   $('#display').text(output);
 }
 
-function clear(){
+function clickDisplay() {
   $('#display').text('0');
+}
+
+function clickOperator() {
+  operatorStr = $(this).text();
+  displayNum = $('#display').text();
+  clickDisplay();
+}
+
+function clickEqual() {
+  var answer;
+  var currentNum = $('#display').text();
+
+  switch (operatorStr) {
+    case '+':
+      answer = parseFloat(displayNum) + parseFloat(currentNum);
+      break;
+    case '-':
+      answer = parseFloat(displayNum) - parseFloat(currentNum);
+      break;
+    case '×':
+      answer = parseFloat(displayNum) * parseFloat(currentNum);
+      break;
+    case '÷':
+      answer = parseFloat(displayNum) / parseFloat(currentNum);
+  }
+  $('#display').text(answer);
 }
