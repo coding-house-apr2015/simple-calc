@@ -47,4 +47,5 @@ function calculate(){
     case '×': memory *= parseFloat(display); $('#display').text(memory); break;
     case '÷': memory /= parseFloat(display); $('#display').text(memory); break;
   }
+  operation = '';
 }
